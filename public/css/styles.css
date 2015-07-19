@@ -1,0 +1,16 @@
+h1 {
+    font-size: 100px;
+}
+
+.playerContainer{
+    height:30%;
+    width:25%;
+}
+
+.menuWrapper{
+    height:40px;
+}
+#infoBox{
+    width:90%;
+    height:300px;
+}

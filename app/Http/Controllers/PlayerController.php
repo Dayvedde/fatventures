@@ -13,8 +13,8 @@ use App\Http\Controllers\Controller;
 use DB;
 
 class PlayerController extends Controller {
-    public function testDB(){
-        var_dump("In test DB");
-        return view('testFile');
+    public function home(){
+        $playerName = "David Lai";
+        return view('player.home', array('playerName' => $playerName));
     }
 }
