@@ -9,19 +9,25 @@
 ?>
 
 {!! Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js') !!}
-
 @extends ('header1')
 
 @section('content')
 <h1> Welcome to Fatventures! </h1>
-<div class='playerContainer'>
-    
+<div class ='playerWrapper'>
+    <div class='playerContainer'>
+        The player
+    </div>
+
+    <div class='playerStats'>
+        <h2>Player's Stats</h2>
+    </div>
 </div>
+
 <div class='menuWrapper'>
     <input id='actionBicepCurl' type='button' value='Bicep curls'/>
     <input id='actionPushUp' type='button' value='Push ups'/>
     <input id='actionSitUp' type='button' value='Sit ups'/>
-    <input id='actionPlank' type='button' value='Plank'/>
+    <input id='actionPlank' type='button' value='Plank'/><br>
     <input id='actionShop' type='button' value='Store' />
     <input id='actionGym' type ='button' value='Gym' />
 </div>
@@ -31,35 +37,9 @@
 @stop
 
 <script type='text/javascript'>
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i<ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1);
-            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-        }
-        return "";
-    }
-    
-    function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + "; " + expires;
-    }
-
     $(document).ready(function(){
         $('#actionBicepCurl').on('click', function(){
-            var bicepCurls = getCookie("bicepCurls");
-            if (bicepCurls !== 'NaN'){
-                bicepCurls = parseInt(bicepCurls) + 10;
-                setCookie("bicepCurls", bicepCurls, 365);
-            } else {
-                bicepCurls = 10;
-                setCookie("bicepCurls", 10, 1);
-            }
-           $("#infoBox").text("You just did " + bicepCurls + " bicep curls!"); 
+            actionBicepCurl();
         });
         $('#actionPushUp').on('click', function(){
            $("#infoBox").text("You just did 10 push ups!"); 
