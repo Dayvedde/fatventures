@@ -23,6 +23,7 @@
     <input id='actionSitUp' type='button' value='Sit ups'/>
     <input id='actionPlank' type='button' value='Plank'/>
     <input id='actionShop' type='button' value='Store' />
+    <input id='actionGym' type ='button' value='Gym' />
 </div>
 <div id='infoBox'>
     
@@ -71,6 +72,9 @@
         });
         $('#actionShop').on('click', function(){
             window.location.href = 'store';
+        });
+        $('#actionGym').on('click', function(){
+            window.location.href = 'gym';
         });
     });
 </script>

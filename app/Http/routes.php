@@ -16,5 +16,5 @@
 //});
 Route::get('/', 'PlayerController@home');
 Route::get('store', 'PlayerController@store');
+Route::get('gym', 'PlayerController@gym');
 
-Route::get('testFile', 'PlayerController@testDB');

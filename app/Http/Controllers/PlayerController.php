@@ -21,4 +21,8 @@ class PlayerController extends Controller {
     public function store(){
         return view ('player.store');
     }
+    
+    public function gym(){
+        return view ('player.gym');
+    }
 }
