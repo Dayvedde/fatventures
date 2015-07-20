@@ -15,5 +15,6 @@
 //    return view('welcome');
 //});
 Route::get('/', 'PlayerController@home');
+Route::get('store', 'PlayerController@store');
 
 Route::get('testFile', 'PlayerController@testDB');

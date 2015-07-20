@@ -22,6 +22,7 @@
     <input id='actionPushUp' type='button' value='Push ups'/>
     <input id='actionSitUp' type='button' value='Sit ups'/>
     <input id='actionPlank' type='button' value='Plank'/>
+    <input id='actionShop' type='button' value='Store' />
 </div>
 <div id='infoBox'>
     
@@ -55,7 +56,7 @@
                 setCookie("bicepCurls", bicepCurls, 365);
             } else {
                 bicepCurls = 10;
-                setCookie("bicepCurls", 10, 365);
+                setCookie("bicepCurls", 10, 1);
             }
            $("#infoBox").text("You just did " + bicepCurls + " bicep curls!"); 
         });
@@ -67,6 +68,9 @@
         });
         $('#actionPlank').on('click', function(){
            $("#infoBox").text("You just planked for 10 seconds!"); 
+        });
+        $('#actionShop').on('click', function(){
+            window.location.href = 'store';
         });
     });
 </script>

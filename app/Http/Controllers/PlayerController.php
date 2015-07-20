@@ -17,4 +17,8 @@ class PlayerController extends Controller {
         $playerName = "David Lai";
         return view('player.home', array('playerName' => $playerName));
     }
+    
+    public function store(){
+        return view ('player.store');
+    }
 }
